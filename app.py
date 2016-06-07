@@ -31,7 +31,7 @@ def webhook():
 def processRequest(req):
     if req.get("result").get("action") != "novolink":
         return {}
-    baseurl = "http://aleatorio.jeffcarvalho.com.br/getlink.php?"
+    baseurl = "http://aleatorio.jeffcarvalho.com.br/getlink.php"
     yql_url = baseurl
     result = urllib.urlopen(yql_url).read()
     data = json.loads(result)
